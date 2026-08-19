@@ -1,5 +1,5 @@
 {
-    "version":  "2.2.4",
+    "version":  "2.2.5",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "更新時はインストーラーが自動で進むように"
+    "notes":  "メニュー中は不要な問い合わせを省略／JS・CSSの再取得をやめて起動を軽く"
 }
