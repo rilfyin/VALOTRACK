@@ -1,5 +1,5 @@
 {
-    "version":  "2.2.6",
+    "version":  "2.2.7",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "ファイル読み込みを高速化（保存済み戦績の読み出しが約10分の1に）"
+    "notes":  "Discord表示の切り替えが初回だけ20秒遅れる不具合と、試合中に切り替えが早まる不具合を修正"
 }
