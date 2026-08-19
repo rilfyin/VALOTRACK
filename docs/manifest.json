@@ -1,5 +1,5 @@
 {
-    "version":  "2.2.0",
+    "version":  "2.2.1",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "モード名をゲーム内表記に統一 / 英語表示を全面修正 / Discordにランク画像と目標ランク / 更新機能"
+    "notes":  "更新機能の動作確認"
 }
