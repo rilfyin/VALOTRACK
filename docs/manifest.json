@@ -1,5 +1,5 @@
 {
-    "version":  "2.2.1",
+    "version":  "2.2.2",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "更新機能の動作確認"
+    "notes":  "Discordのランク章が枠で切れないよう余白を調整"
 }
