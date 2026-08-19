@@ -1,5 +1,5 @@
 {
-    "version":  "2.2.3",
+    "version":  "2.2.4",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "ランク章に暗い背景（明るいテーマ対策）／切り替えを5秒に"
+    "notes":  "更新時はインストーラーが自動で進むように"
 }
