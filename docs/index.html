@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>VALOTRACK 配布 — 管理</title>
+<style>
+  :root{
+    --bg:#0b0e13; --panel:#12161d; --panel2:#171c25; --line:#232a35; --line2:#333d4c;
+    --fg:#e8ecf2; --txt2:#a7b0bd; --txt3:#6f7b8b; --red:#ff4655; --green:#22d29b;
+    --r:10px; --r-s:7px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font:14px/1.7 system-ui,"Segoe UI","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px; margin:0 auto; padding:34px 22px 70px}
+  header{display:flex; align-items:center; gap:12px; margin-bottom:8px}
+  .mark{
+    width:26px; height:26px; flex:none; border-radius:5px; background:var(--red);
+    position:relative; overflow:hidden;
+  }
+  .mark::after{
+    content:""; position:absolute; left:9px; top:-3px; width:5px; height:32px;
+    background:#fff; transform:rotate(20deg);
+  }
+  h1{font-size:20px; margin:0; letter-spacing:.01em}
+  h1 b{color:var(--red)}
+  .sub{color:var(--txt3); font-size:12px; margin-bottom:26px}
+
+  .card{
+    background:var(--panel); border:1px solid var(--line); border-radius:var(--r);
+    padding:18px 20px; margin-bottom:14px;
+  }
+  .card h2{
+    font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--txt3); margin:0 0 14px; font-weight:600;
+  }
+
+  .now{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap}
+  .ver{font-size:34px; font-weight:700; letter-spacing:-.01em; font-variant-numeric:tabular-nums}
+  .pill{
+    font-size:11px; padding:3px 9px; border-radius:99px;
+    background:rgba(34,210,155,.12); color:var(--green); border:1px solid rgba(34,210,155,.3);
+  }
+  .notes{color:var(--txt2); font-size:13px; margin-top:8px}
+
+  .dl{
+    display:inline-flex; align-items:center; gap:9px; margin-top:16px;
+    padding:11px 18px; border-radius:var(--r-s); text-decoration:none;
+    background:var(--red); color:#fff; font-weight:600; font-size:13.5px;
+  }
+  .dl:hover{filter:brightness(1.08)}
+  .dl svg{width:16px; height:16px; fill:none; stroke:currentColor; stroke-width:2}
+
+  label{display:block; font-size:12px; color:var(--txt2); margin:12px 0 5px}
+  input, textarea{
+    width:100%; background:var(--panel2); border:1px solid var(--line); color:var(--fg);
+    border-radius:var(--r-s); padding:9px 11px; font:inherit; font-size:13px; outline:none;
+  }
+  input:focus, textarea:focus{border-color:var(--line2)}
+  textarea{resize:vertical; min-height:64px}
+  .row{display:flex; gap:12px; flex-wrap:wrap}
+  .row>div{flex:1 1 190px}
+
+  button{
+    margin-top:14px; padding:9px 16px; border-radius:var(--r-s); cursor:pointer;
+    background:var(--panel2); border:1px solid var(--line2); color:var(--fg);
+    font:inherit; font-size:13px; font-weight:600;
+  }
+  button:hover{border-color:var(--red)}
+  pre{
+    background:#0d1117; border:1px solid var(--line); border-radius:var(--r-s);
+    padding:13px 15px; overflow-x:auto; margin:14px 0 0;
+    font:12.5px/1.65 ui-monospace,Consolas,monospace; color:#cbd5e1;
+  }
+  code{font:12.5px ui-monospace,Consolas,monospace; color:#e8ecf2;
+       background:var(--panel2); padding:1px 5px; border-radius:4px}
+  ol{padding-left:20px; margin:0}
+  ol li{margin-bottom:9px; color:var(--txt2)}
+  ol li b{color:var(--fg)}
+  .warn{
+    border-left:3px solid #e0a33e; background:rgba(224,163,62,.07);
+    padding:11px 14px; border-radius:var(--r-s); font-size:12.5px; color:var(--txt2);
+    margin-top:14px;
+  }
+  .warn b{color:var(--fg)}
+  footer{color:var(--txt3); font-size:11.5px; margin-top:30px; text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="mark"></span>
+    <h1>VALO<b>TRACK</b> 配布</h1>
+  </header>
+  <div class="sub">このページは自分用です。利用者が見るものではありません。</div>
+
+  <!-- ============ 今出している版 ============ -->
+  <div class="card">
+    <h2>今出している版</h2>
+    <div class="now">
+      <span class="ver" id="curVer">—</span>
+      <span class="pill" id="curPill">manifest.json を読み込み中</span>
+    </div>
+    <div class="notes" id="curNotes"></div>
+    <a class="dl" id="curDl" href="VALOTRACK-Setup.exe" download>
+      <svg viewBox="0 0 24 24"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5"/><path d="M4 19h16"/></svg>
+      インストーラーを取得
+    </a>
+  </div>
+
+  <!-- ============ 新しい版を出す ============ -->
+  <div class="card">
+    <h2>新しい版を出す</h2>
+    <ol>
+      <li>新しい <b>VALOTRACK-Setup.exe</b> をこのフォルダに上書きで置く</li>
+      <li>下でバージョンと変更点を入れて、出てきた JSON を <b>manifest.json</b> に貼る</li>
+      <li>以上。利用者のアプリは起動6秒後に気づきます</li>
+    </ol>
+
+    <div class="row">
+      <div>
+        <label for="v">バージョン（数字とドットのみ）</label>
+        <input id="v" value="2.1.0" placeholder="2.1.0">
+      </div>
+      <div>
+        <label for="u">インストーラーの URL</label>
+        <input id="u" placeholder="https://example.com/valotrack/VALOTRACK-Setup.exe">
+      </div>
+    </div>
+    <label for="n">変更点（利用者に見えます）</label>
+    <textarea id="n" placeholder="モード名をゲーム内表記に合わせた／英語表示を修正"></textarea>
+
+    <button id="gen">manifest.json を作る</button>
+    <button id="copy">コピー</button>
+    <pre id="out">{}</pre>
+
+    <div class="warn">
+      <b>バージョンは必ず上げてください。</b>
+      同じか小さい番号だと «更新あり» になりません。
+      比較は数字ごとなので <code>2.10.0</code> は <code>2.9.0</code> より新しい扱いです。
+    </div>
+  </div>
+
+  <!-- ============ 置き方 ============ -->
+  <div class="card">
+    <h2>サーバーへの置き方</h2>
+    <pre>あなたのドメイン/valotrack/
+  ├─ manifest.json          ← 認証なしで読めるようにする（必須）
+  ├─ VALOTRACK-Setup.exe    ← 同上
+  ├─ index.html             ← このページ。自分だけが見られるようにする
+  ├─ .htaccess              ← 上2つは公開、このページだけ保護
+  └─ robots.txt             ← 検索に載せない</pre>
+
+    <div class="warn">
+      <b>manifest.json と exe はログイン不要にしてください。</b>
+      利用者のアプリはログインできないため、保護すると更新に気づけません。
+      URL を人に教えず、検索避けをしておけば実質見られません。
+    </div>
+  </div>
+
+  <!-- ============ このページに鍵をかける ============ -->
+  <div class="card">
+    <h2>このページだけに鍵をかける（Apache）</h2>
+    <p style="color:var(--txt2);font-size:13px;margin:0 0 4px">
+      <code>.htaccess</code> をこのフォルダに置きます。ユーザー名とパスワードは
+      <code>htpasswd -c /パス/.htpasswd 好きな名前</code> で作ります。
+    </p>
+    <pre># このフォルダは既定で要認証
+AuthType Basic
+AuthName "VALOTRACK"
+AuthUserFile /絶対パス/.htpasswd
+Require valid-user
+
+# ただし更新に必要な2つだけは誰でも読める
+&lt;FilesMatch "^(manifest\.json|VALOTRACK-Setup\.exe)$"&gt;
+  Require all granted
+&lt;/FilesMatch&gt;</pre>
+    <p style="color:var(--txt3);font-size:12px;margin:12px 0 0">
+      Nginx なら <code>location = /valotrack/index.html { auth_basic "VALOTRACK"; auth_basic_user_file …; }</code> で同じことができます。
+    </p>
+  </div>
+
+  <footer>VALOTRACK · by Rilfyin</footer>
+</div>
+
+<script>
+/* ---- 今の manifest.json を読んで表示する ---- */
+(async function () {
+  const ver = document.getElementById('curVer');
+  const pill = document.getElementById('curPill');
+  const notes = document.getElementById('curNotes');
+  const dl = document.getElementById('curDl');
+  try {
+    const r = await fetch('manifest.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!r.ok) throw new Error(r.status);
+    const o = await r.json();
+    ver.textContent = o.version || '—';
+    notes.textContent = o.notes || '';
+    if (o.url) {
+      dl.href = o.url;
+      document.getElementById('u').value = o.url;
+      /* 次に出す版として、末尾を1つ進めた候補を入れておく */
+      const p = String(o.version || '2.0.0').split('.').map(Number);
+      if (p.length >= 3 && p.every(n => !isNaN(n))) {
+        p[p.length - 1] += 1;
+        document.getElementById('v').value = p.join('.');
+      }
+    }
+    /* 読み込みで欄が埋まってから作り直す（先に走ると «URL が空» と怒られる） */
+    build();
+    const ok = o.url && /^https:\/\//.test(o.url);
+    pill.textContent = ok ? '公開中' : 'url が https ではありません';
+    pill.style.color = ok ? '' : '#ff4655';
+    pill.style.borderColor = ok ? '' : 'rgba(255,70,85,.35)';
+    pill.style.background = ok ? '' : 'rgba(255,70,85,.1)';
+  } catch (e) {
+    pill.textContent = 'manifest.json が読めません（まだ置いていない？）';
+    pill.style.color = '#e0a33e';
+    pill.style.borderColor = 'rgba(224,163,62,.35)';
+    pill.style.background = 'rgba(224,163,62,.1)';
+  }
+})();
+
+/* ---- 新しい manifest.json を組み立てる ---- */
+const out = document.getElementById('out');
+function build() {
+  const v = document.getElementById('v').value.trim();
+  const u = document.getElementById('u').value.trim();
+  const n = document.getElementById('n').value.trim();
+  const bad = [];
+  if (!/^\d+(\.\d+)*$/.test(v)) bad.push('バージョンは数字とドットだけにしてください');
+  if (!/^https:\/\//.test(u)) bad.push('URL は https で始めてください');
+  if (bad.length) { out.textContent = '// ' + bad.join(' / '); return null; }
+  const o = { version: v, url: u };
+  if (n) o.notes = n;
+  const s = JSON.stringify(o, null, 2);
+  out.textContent = s;
+  return s;
+}
+document.getElementById('gen').onclick = build;
+document.getElementById('copy').onclick = async () => {
+  const s = build();
+  if (!s) return;
+  try { await navigator.clipboard.writeText(s); } catch (e) {}
+  const b = document.getElementById('copy');
+  const old = b.textContent; b.textContent = 'コピーしました';
+  setTimeout(() => { b.textContent = old; }, 1400);
+};
+build();
+</script>
+</body>
+</html>
