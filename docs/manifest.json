@@ -1,5 +1,5 @@
 {
-    "version":  "2.2.2",
+    "version":  "2.2.3",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "Discordのランク章が枠で切れないよう余白を調整"
+    "notes":  "ランク章に暗い背景（明るいテーマ対策）／切り替えを5秒に"
 }
