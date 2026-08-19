@@ -1,5 +1,5 @@
 {
-    "version":  "2.2.5",
+    "version":  "2.2.6",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "メニュー中は不要な問い合わせを省略／JS・CSSの再取得をやめて起動を軽く"
+    "notes":  "ファイル読み込みを高速化（保存済み戦績の読み出しが約10分の1に）"
 }
