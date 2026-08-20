@@ -1,5 +1,6 @@
 {
-    "version":  "2.2.9",
+    "version":  "2.3.0",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "知らせ（トースト・トレイ通知）が日本語モードでも英語で出る不具合を修正／試合中の取得を大幅に高速化（ライブ状態 220〜716ms → 31ms、プレイヤー一覧 195ms → 62ms）／エイム練習の全画面ボタンでエラーが出ることがあったのを修正"
+    "notes":  "更新のお知らせが英語表示でも日本語のままだったのを修正／ゲーム内表示が「直近3試合」に固定されていて、見る試合数の設定が効いていなかったのを修正／「今アクトのみ」で相手の戦績を見られるように追加／エージェント選択に気づくまで最大10秒かかっていたのを3.5秒に短縮",
+    "notesEn":  "Update notices now follow the app language / The in-game overlay was stuck on \"last 3 matches\" and ignored the match-count setting — fixed / Added \"This act only\" for opponent stats / Agent select is now noticed in 3.5s instead of up to 10s"
 }
