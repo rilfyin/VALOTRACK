@@ -1,6 +1,6 @@
 {
-    "version":  "2.3.0",
+    "version":  "2.3.1",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "更新のお知らせが英語表示でも日本語のままだったのを修正／ゲーム内表示が「直近3試合」に固定されていて、見る試合数の設定が効いていなかったのを修正／「今アクトのみ」で相手の戦績を見られるように追加／エージェント選択に気づくまで最大10秒かかっていたのを3.5秒に短縮",
-    "notesEn":  "Update notices now follow the app language / The in-game overlay was stuck on \"last 3 matches\" and ignored the match-count setting — fixed / Added \"This act only\" for opponent stats / Agent select is now noticed in 3.5s instead of up to 10s"
+    "notes":  "試合が始まった瞬間を待たずに捉えるようにして、相手・味方が出るまでを最大5秒短縮／名前とランクを同時に取るようにして、試合開始直後の取得を短縮／ライブの知らせ（ランクアップ・今日のまとめ・ふりかえり）が英語表示でも日本語のままだったのを修正／サイドバーの「126 試合保存済み / 全53」が実態と合っていなかったのを修正",
+    "notesEn":  "Match starts are now detected the moment they happen, cutting up to 5s off how long both teams take to appear / Names and ranks are fetched together, shortening the first load after a match starts / Live notices (rank up, daily summary, match review) stayed Japanese in English mode — fixed / The sidebar showed a misleading \"126 saved / 53 total\" — fixed"
 }
