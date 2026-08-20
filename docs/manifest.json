@@ -1,6 +1,6 @@
 {
-    "version":  "2.3.1",
+    "version":  "2.4.0",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "試合が始まった瞬間を待たずに捉えるようにして、相手・味方が出るまでを最大5秒短縮／名前とランクを同時に取るようにして、試合開始直後の取得を短縮／ライブの知らせ（ランクアップ・今日のまとめ・ふりかえり）が英語表示でも日本語のままだったのを修正／サイドバーの「126 試合保存済み / 全53」が実態と合っていなかったのを修正",
-    "notesEn":  "Match starts are now detected the moment they happen, cutting up to 5s off how long both teams take to appear / Names and ranks are fetched together, shortening the first load after a match starts / Live notices (rank up, daily summary, match review) stayed Japanese in English mode — fixed / The sidebar showed a misleading \"126 saved / 53 total\" — fixed"
+    "notes":  "ライブの「見る試合数（直近3／5／10…）」をやめて、「今アクト／アクトごと／全て」で分けるようにしました。アクトをまたぐと実力もランク帯も変わるため、直近◯試合が前アクトとの混ざりものになって意味を持たなくなっていたためです／相手の履歴は Riot が直近20試合までしか返さないので、その旨を選択欄のそばに明記／エージェント別の指摘が英語表示で日本語のまま残っていたのを修正",
+    "notesEn":  "The live \"matches to show\" selector (last 3 / 5 / 10 …) is gone. It now splits by This act / a specific act / All, because a fixed match count mixed the current act with the previous one and stopped meaning anything / Riot only returns each player\u0027s last 20 matches, and the selector now says so / One agent-comparison insight stayed Japanese in English mode — fixed"
 }
