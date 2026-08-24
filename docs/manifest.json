@@ -1,6 +1,6 @@
 {
-    "version":  "2.7.2",
+    "version":  "2.8.0",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "「更新しても速くならない」の原因を特定して直しました。こちらの環境は要約が1600件たまっており、まっさらな導入で測っていませんでした。実際に配布版と同じ«何も貯まっていない»状態で測ると、最初の3人が出るまで5.1秒・10人中3人しか出せない状態でした／まず1人10試合ぶんだけ取って先に出し、そのあと静かにアクトぶん（最大50試合）まで伸ばす2段階にしました。同じ«何も貯まっていない»状態で、最初の3人まで 5.1秒 → 2.0秒、出せた人数 3/10 → 9/10 になりました",
-    "notesEn":  "Fixed the real cause of \"it is not any faster after updating\". Our own machine had 1600 cached digests, so the measurements never reflected a fresh install. Measured properly on an empty cache, the first three opponents took 5.1 s and only 3 of 10 resolved / Now it fetches just 10 matches per player first so the numbers appear, then quietly extends to the full act (up to 50) in the background. On the same empty cache: first three in 2.0 s instead of 5.1 s, and 9 of 10 resolve instead of 3"
+    "notes":  "エイム練習に「florescent 式」を5種目追加しました。敵を追い続けるのではなく、クロスヘアを敵の行き先に置いて動かさず、頭と重なった一瞬にクリックを合わせる練習です／平行移動 × タイミング（基本）／行き先を読む（速い横移動）／切り返しを読む（折り返しの端を狙う）／重なる一瞬（小さい的で押す瞬間の精度）／遠距離の横切り（重なる時間が最も短い）／どれも自分は動けない設定で、ヘッドショットのみ有効です。結果画面の「1キルあたりの移動量」を見てください。追いかけているほど大きくなるので、同じ命中率なら小さいほうが目指す形に近いです",
+    "notesEn":  "Added five \"florescent style\" aim drills. Instead of tracking a target, you park the crosshair where they are heading, keep the mouse still, and click the instant their head crosses it / Crossing × timing (basic) / Lead the path (fast strafe) / Read the turn (aim at where they reverse) / The overlap moment (small target, precision of the click) / Long crossing (shortest overlap window) / All lock you in place and count headshots only. Watch \"mouse travel per kill\" on the result screen — the more you chase, the higher it gets, so at equal accuracy a lower number is closer to the goal"
 }
