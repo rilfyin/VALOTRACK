@@ -1,6 +1,6 @@
 {
-    "version":  "2.7.1",
+    "version":  "2.7.2",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "「更新したのに何も変わらない」への対応／ヘルプ → 困ったとき に «いま動いている版» を表示するようにしました。更新が当たったかを自分で確かめられます／相手の戦績は6時間そのまま使い回す作りで、更新前に計算した数字が更新後もそのまま出続けていました。数え方を変えた時は作り直すようにしました",
-    "notesEn":  "For reports of \"I updated but nothing changed\" / Help → Troubleshooting now shows the running version, so you can confirm the update actually applied / Opponent stats were reused for 6 hours, so figures computed by the previous version kept showing after an update. They are now recomputed when the calculation changes"
+    "notes":  "「更新しても速くならない」の原因を特定して直しました。こちらの環境は要約が1600件たまっており、まっさらな導入で測っていませんでした。実際に配布版と同じ«何も貯まっていない»状態で測ると、最初の3人が出るまで5.1秒・10人中3人しか出せない状態でした／まず1人10試合ぶんだけ取って先に出し、そのあと静かにアクトぶん（最大50試合）まで伸ばす2段階にしました。同じ«何も貯まっていない»状態で、最初の3人まで 5.1秒 → 2.0秒、出せた人数 3/10 → 9/10 になりました",
+    "notesEn":  "Fixed the real cause of \"it is not any faster after updating\". Our own machine had 1600 cached digests, so the measurements never reflected a fresh install. Measured properly on an empty cache, the first three opponents took 5.1 s and only 3 of 10 resolved / Now it fetches just 10 matches per player first so the numbers appear, then quietly extends to the full act (up to 50) in the background. On the same empty cache: first three in 2.0 s instead of 5.1 s, and 9 of 10 resolve instead of 3"
 }
