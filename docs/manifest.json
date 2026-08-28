@@ -1,6 +1,6 @@
 {
-    "version":  "2.19.1",
+    "version":  "2.20.0",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "・英語表示で「RR 変動」が日本語のままだったのを修正",
-    "notesEn":  "- Fixed \"RR change\" staying in Japanese in English mode"
+    "notes":  "【更新の知らせが届いていなかったのを修正】\n・これまで更新の確認は «起動6秒後に1回だけ» で、しかも知らせ方は\n  画面上部の帯だけでした。アプリを開きっぱなしの人・ゲーム中で最小化して\n  いる人には、新しい版が出ても永久に届いていませんでした\n・トレイからも知らせるようにしました（ゲーム中でも気づけます）\n・確認を起動時1回 → 起動時＋6時間おきに\n・「あとで」を押した版は自動では知らせません（断ったのに何度も出ないように）",
+    "notesEn":  "[Update notices were not reaching people]\n・The update check ran once, six seconds after launch, and the only notice was a banner\n  inside the window. Anyone who leaves the app running - or has it minimised while\n  playing - never found out that a new version existed\n・Updates are now also announced from the tray, so you notice mid-game\n・The check runs at launch and then every six hours instead of just once\n・Dismissing with \"Later\" silences that version, so it will not keep reappearing"
 }
