@@ -1,6 +1,6 @@
 {
-    "version":  "2.21.2",
+    "version":  "2.21.3",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "・プリエイム練習の説明文が英語表示で日本語のままだったのを修正",
-    "notesEn":  "- Fixed the pre-aim drill text staying in Japanese in English mode"
+    "notes":  "・ゲーム内表示が読む /api/pstats が遅かったのを修正。10人ぶんに絞って返す形にした際、\n  «解く» 部分は丸ごとやっていたため、結局ファイル全部を読み解いていました\n  （323人・612KB で 585ms、絞っても 188ms）。文字列のまま必要な所だけ切り出します\n・相手戦績の貯め場所の上限を 600人 → 250人に。本体が起動時に丸ごと読むので、\n  大きくなるほど起動が遅くなっていました",
+    "notesEn":  "- Fixed /api/pstats being slow for the overlay. When we started filtering to ten players,\n  the parsing was still done over the whole file (585ms at 323 players / 612KB, 188ms even\n  when filtered). It now slices out just what is needed without parsing\n- Opponent-stats cache capped at 250 players instead of 600. The app reads the whole file\n  at startup, so the larger it grew the slower startup became"
 }
