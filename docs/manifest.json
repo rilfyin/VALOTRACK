@@ -1,6 +1,6 @@
 {
-    "version":  "2.21.3",
+    "version":  "2.22.1",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "・ゲーム内表示が読む /api/pstats が遅かったのを修正。10人ぶんに絞って返す形にした際、\n  «解く» 部分は丸ごとやっていたため、結局ファイル全部を読み解いていました\n  （323人・612KB で 585ms、絞っても 188ms）。文字列のまま必要な所だけ切り出します\n・相手戦績の貯め場所の上限を 600人 → 250人に。本体が起動時に丸ごと読むので、\n  大きくなるほど起動が遅くなっていました",
-    "notesEn":  "- Fixed /api/pstats being slow for the overlay. When we started filtering to ten players,\n  the parsing was still done over the whole file (585ms at 323 players / 612KB, 188ms even\n  when filtered). It now slices out just what is needed without parsing\n- Opponent-stats cache capped at 250 players instead of 600. The app reads the whole file\n  at startup, so the larger it grew the slower startup became"
+    "notes":  "・相手戦績の1試合ずつの記録を直近20件までにしました。50件持っていたため\n  1人1.9KB・250人で475KBになり、本体が起動のたびに丸ごと読んでいました。\n  使っているのは «直近5戦» と «このマップでの成績» だけなので、数字は変わりません",
+    "notesEn":  "- Per-match records inside the opponent cache are capped at the most recent 20.\n  Keeping 50 made each player 1.9KB (475KB at 250 players), which the app read in full\n  at every startup. Only the last five results and the per-map record are used,\n  so no displayed number changes"
 }
