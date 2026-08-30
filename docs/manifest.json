@@ -1,6 +1,6 @@
 {
-    "version":  "2.22.1",
+    "version":  "2.22.2",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "・相手戦績の1試合ずつの記録を直近20件までにしました。50件持っていたため\n  1人1.9KB・250人で475KBになり、本体が起動のたびに丸ごと読んでいました。\n  使っているのは «直近5戦» と «このマップでの成績» だけなので、数字は変わりません",
-    "notesEn":  "- Per-match records inside the opponent cache are capped at the most recent 20.\n  Keeping 50 made each player 1.9KB (475KB at 250 players), which the app read in full\n  at every startup. Only the last five results and the per-map record are used,\n  so no displayed number changes"
+    "notes":  "・プレイヤーページにモード絞り込みを追加。全モードと、コンペ／アンレート／デスマッチなど実際に出てきたモードごとに分けて見られます\n・貯めてある対戦相手の記録が消えうる経路を塞ぎました\n・枠が一杯の時、中身のある記録が、数字の入っていない記録より先に捨てられていた問題を修正\n・武器欄に英語（ability）がそのまま出ていた箇所を修正\n・「使い方」がいつも v2.0 と表示していたのを、実際の版に修正\n・残っていない試合のリンクを開いた時、内部の英語ではなく理由と戻る手段を表示\n・覚えのないリンクを開いた時にホームへ戻るように修正",
+    "notesEn":  "- Mode filter on the player page: all modes, or split by the modes actually played.\n- Closed a path where saved opponent records could be lost.\n- Fixed pruning that dropped records with data before empty ones.\n- Fixed English text leaking into the weapon list.\n- The Help page showed a fixed v2.0; it now shows the real version.\n- Opening a missing match now explains why, with a way back, instead of a raw error.\n- Unknown links now fall back to Home."
 }
