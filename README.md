@@ -62,7 +62,7 @@ Created by **Rilfyin** · Developed by **koppepandayo**
 
 ### 新しい版を出す
 
-1. ソース側（`valotrack-src`）で `app\release.ps1` を実行する。インストーラーを作り、`docs/VALOTRACK-Setup.exe` と `docs/manifest.json` を書き換える
+1. ソース側（`C:\building\VALOTRACK\src`）で `app\release.ps1` を実行する。インストーラーを作り、`docs/VALOTRACK-Setup.exe` と `docs/manifest.json` を書き換える
 
    ```
    .\release.ps1 -Version 2.23.1 -Notes "変更点1|変更点2" -NotesEn "change 1|change 2"
