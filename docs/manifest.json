@@ -1,6 +1,6 @@
 {
     "version":  "2.24.2",
     "url":  "https://rilfyin.github.io/VALOTRACK/VALOTRACK-Setup.exe",
-    "notes":  "・配信表示: 設定を VALOTRACK に保存（URL はずっと同じ・OBS も自動で切り替わる） / ・配信表示: 戦績は VALOTRACK を起動してからの分に / ・配信表示: パーティコード・並び方（右 / 下）・背景の濃さ / ・配信表示: コンペ以外はレベル・マップとスコア・K/D など、プレミアはチーム情報 / ・配信表示: RR と昇格・降格の動き、見本で確かめられるボタン / ・背景に好きな画像を敷けるように（設定 → アプリカラー）",
-    "notesEn":  "- Stream overlay: settings saved in VALOTRACK (the URL never changes, OBS updates itself) / - Stream overlay: W-L counts since VALOTRACK started / - Stream overlay: party code, layout (right / below), background opacity / - Stream overlay: level, map and score, K/D etc. outside Competitive; team info in Premier / - Stream overlay: RR and promotion/demotion animations, sample buttons to preview them / - Background image for the app (Settings → App color)"
+    "notes":  "・配信表示: 設定を VALOTRACK に保存（URL はずっと同じ・OBS も自動で切り替わる） / ・配信表示: 戦績は VALOTRACK を起動してからの分に / ・配信表示: パーティコード・並び方（右・下）・背景の濃さ / ・配信表示: コンペ以外はレベル・マップとスコア・K/D など、プレミアはチーム情報 / ・配信表示: RR と昇格・降格の動き、見本で確かめられるボタン / ・背景に好きな画像を敷けるように（設定 → アプリカラー）",
+    "notesEn":  "- Stream overlay: settings saved in VALOTRACK (the URL never changes, OBS updates itself) / - Stream overlay: W-L counts since VALOTRACK started / - Stream overlay: party code, layout (right or below), background opacity / - Stream overlay: level, map and score, K/D etc. outside Competitive; team info in Premier / - Stream overlay: RR and promotion/demotion animations, sample buttons to preview them / - Background image for the app (Settings → App color)"
 }
