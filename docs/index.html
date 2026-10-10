@@ -251,13 +251,13 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
         <div class="feat rv">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8M5 10v10h14V10"/></svg></div>
           <h3><span lang="ja">ホームでまとめて確認</span><span lang="en">Everything on Home</span></h3>
-          <p><span lang="ja">ランクと RR、このセッションの成績、勝率・K/D・ACS・HS率。モードとアクトで絞り込めて、モードをまぜた数字は出しません。</span>
-             <span lang="en">Rank and RR, this session, win rate, K/D, ACS and HS%. Filter by mode and act — modes are never mixed together.</span></p>
+          <p><span lang="ja">ランクと RR、RR の推移、勝率・K/D・ACS・HS率。モードを選ぶと、そのモードの直近10試合で数えます（モードをまぜた数字は出しません）。</span>
+             <span lang="en">Rank and RR, your RR trend, win rate, K/D, ACS and HS%. Pick a mode and it counts that mode's last 10 matches — modes are never mixed together.</span></p>
         </div>
         <div class="feat rv">
           <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></div>
           <h3><span lang="ja">ライブ：試合中の全員</span><span lang="en">Live: everyone in your match</span></h3>
-          <p><span lang="ja">10 人の現ランク・最高ランク・直近の K/D や勝率、組んで来ているパーティまで。チームの平均も比べられます。</span>
+          <p><span lang="ja">10 人の現ランク・最高ランク・同じモードの直近10試合の K/D や勝率、組んで来ているパーティまで。チームの平均も比べられます。</span>
              <span lang="en">Current and peak rank, recent K/D and win rate for all 10 players, plus who is queuing together. Compare team averages at a glance.</span></p>
         </div>
         <div class="feat rv">
@@ -286,8 +286,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
         </div>
       </div>
       <p class="more rv">
-        <span lang="ja">ほかにも <b>定点</b>・<b>クロスヘア</b>・<b>作戦盤</b>・<b>プレイヤー検索</b>・<b>e-Sports</b>・<b>エイム練習（VALOAIM）</b> など。日本語 / English に対応。</span>
-        <span lang="en">Also <b>lineups</b>, <b>crosshairs</b>, a <b>strat board</b>, <b>player search</b>, <b>e-Sports</b> and an <b>aim trainer (VALOAIM)</b>. Available in Japanese and English.</span>
+        <span lang="ja">ほかにも <b>配信表示（OBS）</b>・<b>プレイヤー検索</b>・<b>エイム練習（VALOAIM）</b>、定点・クロスヘア・作戦盤・e-Sports のサイトへの<b>リンク</b>など。日本語 / English に対応。</span>
+        <span lang="en">Also a <b>stream overlay (OBS)</b>, <b>player search</b>, an <b>aim trainer (VALOAIM)</b>, and <b>links</b> to lineup, crosshair, strat board and esports sites. Available in Japanese and English.</span>
       </p>
     </div>
   </section>
@@ -303,7 +303,9 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
         <button data-shot="home"><span lang="ja">ホーム</span><span lang="en">Home</span></button>
         <button class="on" data-shot="live"><span lang="ja">ライブ</span><span lang="en">Live</span></button>
         <button data-shot="overlay"><span lang="ja">オーバーレイ</span><span lang="en">Overlay</span></button>
+        <button data-shot="matches"><span lang="ja">試合一覧</span><span lang="en">Matches</span></button>
         <button data-shot="stats"><span lang="ja">詳しい分析</span><span lang="en">Detailed analysis</span></button>
+        <button data-shot="obs"><span lang="ja">配信</span><span lang="en">Streaming</span></button>
         <button data-shot="stretch"><span lang="ja">解像度</span><span lang="en">Resolution</span></button>
       </div>
       <div class="shot rv">
@@ -384,8 +386,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
         </details>
         <details class="rv">
           <summary><span lang="ja">戦績のデータはどこに保存されますか？</span><span lang="en">Where is my data stored?</span></summary>
-          <p><span lang="ja">自分の PC の中だけです。VALOTRACK 独自のサーバーはなく、戦績をどこかへ送ることもありません。</span>
-             <span lang="en">Only on your own PC. VALOTRACK has no servers of its own and does not upload your stats anywhere.</span></p>
+          <p><span lang="ja">自分の PC の中だけです。VALOTRACK 独自のサーバーはなく、戦績をどこかへ送ることもありません。前の試合の記録は起動のたびに消して、Riot から取り直します。</span>
+             <span lang="en">Only on your own PC. VALOTRACK has no servers of its own and does not upload your stats anywhere. Previous match records are cleared on every start and fetched again from Riot.</span></p>
         </details>
         <details class="rv">
           <summary><span lang="ja">ゲームやアカウントに影響はありますか？</span><span lang="en">Does it touch the game or my account?</span></summary>
@@ -399,8 +401,8 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
         </details>
         <details class="rv">
           <summary><span lang="ja">前の版に戻したいです</span><span lang="en">I want to go back to an older version</span></summary>
-          <p><span lang="ja"><a href="https://github.com/rilfyin/VALOTRACK/releases" target="_blank" rel="noopener">リリースの一覧</a>から、前の版のインストーラーを入れ直してください。保存してある戦績はそのまま残ります。</span>
-             <span lang="en">Reinstall an older installer from the <a href="https://github.com/rilfyin/VALOTRACK/releases" target="_blank" rel="noopener">releases page</a>. Your saved stats stay as they are.</span></p>
+          <p><span lang="ja"><a href="https://github.com/rilfyin/VALOTRACK/releases" target="_blank" rel="noopener">リリースの一覧</a>から、前の版のインストーラーを入れ直してください。</span>
+             <span lang="en">Reinstall an older installer from the <a href="https://github.com/rilfyin/VALOTRACK/releases" target="_blank" rel="noopener">releases page</a>.</span></p>
         </details>
       </div>
     </div>
@@ -453,10 +455,12 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
   } catch (e) { }
 
   var CAPS = {
-    home:    { ja: 'ランク・このセッション・勝率などをひと目で。モードとアクトで絞り込めます。', en: 'Rank, this session and win rate at a glance, filtered by mode and act.' },
+    home:    { ja: 'ランク・RR の推移・勝率などをひと目で。モードごとの直近10試合で数えます。', en: 'Rank, RR trend and win rate at a glance, counted from each mode\'s last 10 matches.' },
     live:    { ja: '試合中の10人のランク・最高ランク・直近の成績。パーティも分かります。', en: 'Rank, peak rank and recent form for all 10 players, including parties.' },
     overlay: { ja: 'エージェント選択中だけ、ゲーム画面の上に味方の戦績を出します。', en: 'Shown over the game during agent select only, with your teammates’ stats.' },
+    matches: { ja: 'モードを選ぶと、そのモードの直近10試合。行を開くとその試合の要約が出ます。', en: 'Pick a mode to see its last 10 matches. Open a row for that match\'s summary.' },
     stats:   { ja: '攻守別・バイタイプ別の勝率、対戦相手との比較など。', en: 'Attack vs defense, buy types, and how you compare with the players you face.' },
+    obs:     { ja: 'OBS などの配信画面に、ランクと今回の戦績を出します。RR の増減も動きで見せます。', en: 'Show your rank and session record on stream (OBS etc.), with animated RR changes.' },
     stretch: { ja: '引き伸ばし解像度の切り替え。VALORANT の起動・終了に合わせて自動でも。', en: 'Switch to stretched resolution — automatically when VALORANT starts and exits, too.' }
   };
   var cur = 'live';
