@@ -93,12 +93,19 @@ try {
 
   & git add -A
   $changed = (& git status --porcelain)
-  if (-not $changed) {
+  if ($changed) {
+    & git commit -m $Message | Out-Null
+    Say "コミット: $Message"
+  }
+  <# 変更が無くても、まだ送っていないコミット（先にコミットだけしてあった分）があれば送る。
+     以前は «変更が無い» でそこで終わっていて、コミット済みの版が送られなかった #>
+  & git fetch -q origin main 2>$null
+  $ahead = 0
+  try { $ahead = [int](& git rev-list --count origin/main..HEAD) } catch {}
+  if (-not $changed -and $ahead -le 0) {
     Say '変わっているものがありません。送るものはありません。'
     return
   }
-  & git commit -m $Message | Out-Null
-  Say "コミット: $Message"
 
   Say '送信中...'
   & git push -u origin main
