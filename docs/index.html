@@ -178,6 +178,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
 .rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){ .rv{opacity:1;transform:none;transition:none} html{scroll-behavior:auto} }
+/* ダウンロードの近くに出す «非公式・自己責任» の注意書き */
+.risk{margin:14px auto 0;max-width:560px;padding:12px 16px;border:1px solid rgba(255,90,90,.45);
+  background:rgba(255,90,90,.08);border-radius:10px;font-size:12.5px;line-height:1.75;color:var(--txt-2);text-align:left}
+.risk b{color:var(--txt)}
 </style>
 </head>
 <body>
@@ -222,6 +226,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
       <div class="meta">
         <span lang="ja">Windows 10 / 11 · インストールに管理者権限は不要</span>
         <span lang="en">Windows 10 / 11 · No admin rights needed to install</span>
+      </div>
+      <div class="risk">
+        <span lang="ja"><b>非公式のツールです。</b>VALOTRACK は Riot Games の公認ではありません。Riot の利用規約では、許可されていない他社製プログラムの使用が禁止されています。使うことでアカウントに処置（警告・停止など）を受ける可能性があり、その場合も作者は責任を負えません。<b>内容を理解したうえで、自己責任でお使いください。</b></span>
+        <span lang="en"><b>This is an unofficial tool.</b> VALOTRACK is not endorsed by Riot Games. Riot's Terms of Service prohibit the use of unauthorized third-party programs. Using it may lead to action against your account (a warning, a suspension, etc.), and the authors cannot take responsibility if that happens. <b>Please understand this and use it at your own risk.</b></span>
       </div>
 
       <div class="frame rv">
@@ -408,6 +416,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 40px;color:var(--txt-3);f
         <span lang="ja">ダウンロード</span><span lang="en">Download</span>
         <small class="ver"></small>
       </a>
+      <div class="risk">
+        <span lang="ja"><b>非公式のツールです。</b>VALOTRACK は Riot Games の公認ではありません。Riot の利用規約では、許可されていない他社製プログラムの使用が禁止されています。使うことでアカウントに処置（警告・停止など）を受ける可能性があり、その場合も作者は責任を負えません。<b>内容を理解したうえで、自己責任でお使いください。</b></span>
+        <span lang="en"><b>This is an unofficial tool.</b> VALOTRACK is not endorsed by Riot Games. Riot's Terms of Service prohibit the use of unauthorized third-party programs. Using it may lead to action against your account (a warning, a suspension, etc.), and the authors cannot take responsibility if that happens. <b>Please understand this and use it at your own risk.</b></span>
+      </div>
     </div>
   </section>
 </main>

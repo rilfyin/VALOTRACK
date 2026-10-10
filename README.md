@@ -7,6 +7,17 @@ A free VALORANT stats tracker that runs on your Windows PC.
 [サイト / Website](https://rilfyin.github.io/VALOTRACK/) ·
 [これまでの版 / Releases](https://github.com/rilfyin/VALOTRACK/releases)
 
+> [!WARNING]
+> **非公式のツールです。** VALOTRACK は Riot Games の公認ではありません。
+> Riot の利用規約では、許可されていない他社製プログラムの使用が禁止されています。
+> 使うことでアカウントに処置（警告・停止など）を受ける可能性があり、その場合も作者は責任を負えません。
+> **内容を理解したうえで、自己責任でお使いください。**
+>
+> **This is an unofficial tool.** VALOTRACK is not endorsed by Riot Games.
+> Riot's Terms of Service prohibit the use of unauthorized third-party programs.
+> Using it may lead to action against your account (a warning, a suspension, etc.), and the authors cannot take responsibility if that happens.
+> **Please understand this and use it at your own risk.**
+
 ![エージェント選択中のオーバーレイ](docs/img/overlay-ja.png)
 
 ## できること
@@ -35,7 +46,7 @@ A free VALORANT stats tracker that runs on your Windows PC.
 
 **データはどこに保存されますか？** 自分の PC の中だけです。VALOTRACK 独自のサーバーはなく、戦績をどこかへ送ることもありません。
 
-**ゲームやアカウントに影響はありますか？** ゲームのファイルやメモリには触れず、Riot クライアントが PC の中で使っている情報を読み取るだけです（解像度タブを使った時だけ、VALORANT の設定ファイルの解像度を書き換えます）。ただし Riot Games 公式のツールではないため、ご利用は自己責任でお願いします。
+**ゲームやアカウントに影響はありますか？** ゲームのファイルやメモリには触れず、Riot クライアントが PC の中で使っている情報を読み取るだけです（解像度タブを使った時だけ、VALORANT の設定ファイルの解像度を書き換えます）。ただし Riot Games 公式のツールではなく、Riot の利用規約は許可されていない他社製プログラムの使用を禁止しています。アカウントに処置を受ける可能性もあるため、ご利用は自己責任でお願いします（上の注意書きを参照）。
 
 ---
 
